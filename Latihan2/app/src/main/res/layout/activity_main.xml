@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_200"
+            android:onClick="tampilkanPesan"
+            android:text="Pesan"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/btPesan2"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pesan Dua"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:backgroundTint="@color/purple_200"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Anda"
+            android:textSize="20sp"
+            android:layout_marginTop="8dp"/>
+        <EditText
+            android:id="@+id/etPesan1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masukkan nama anda disini"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btTampilkanNama"
+            android:text="Tampilkan Pesan"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:backgroundTint="@color/purple_200"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bilangan Satu"
+            android:textSize="20sp"
+            android:layout_marginTop="8dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etBil1"
+            android:text="Masukan bilangan satu disini"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bilangan Dua"
+            android:textSize="20sp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etBil2"
+            android:text="Masukan bilangan dua disini"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_200"
+                android:text="Tambah"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:id="@+id/btTambah"
+                android:padding="2dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_200"
+                android:text="Kurang"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:id="@+id/btKurang"
+                android:padding="2dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_200"
+                android:text="Bagi"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:id="@+id/btBagi"
+                android:padding="2dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_200"
+                android:text="Kali"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:id="@+id/btKali"
+                android:padding="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_200"
+                android:text="While"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:id="@+id/btWhile"
+                android:padding="2dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_200"
+                android:text="do...While"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:id="@+id/btDoWhile"
+                android:padding="2dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_200"
+                android:text="For"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:id="@+id/btFor"
+                android:padding="2dp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
