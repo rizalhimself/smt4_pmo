@@ -63,7 +63,8 @@
             android:id="@+id/etBil1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Masukan bilangan satu disini" />
+            android:hint="Masukan bilangan satu disini"
+            android:inputType="numberDecimal"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -75,7 +76,8 @@
             android:id="@+id/etBil2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Masukan bilangan dua disini" />
+            android:hint="Masukan bilangan dua disini"
+            android:inputType="numberDecimal"/>
 
         <TextView
             android:layout_width="match_parent"
