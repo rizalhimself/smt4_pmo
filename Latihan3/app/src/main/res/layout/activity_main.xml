@@ -106,6 +106,41 @@
             android:autoLink="all"
             android:clickable="true"/>
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="contoh EditText input nomor"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="contoh EditText input teks"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textFilter|textNoSuggestions"
+            android:hint="contoh EditText dengan mematikan saran"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="contoh EditText dengan ImeOptions Send"
+            android:id="@+id/etKirim"
+            android:imeOptions="actionSend"
+            android:inputType="text"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etCari"
+            android:inputType="number"
+            android:hint="contoh EditText dengan ImeOptions Search"
+            android:imeOptions="actionSearch"/>
+
+
 
     </LinearLayout>
 
