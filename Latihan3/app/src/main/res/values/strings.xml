@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Latihan3</string>
+    
+    <string name="contohHttpPanjang">
+        <![CDATA[
+        <h1>FYI</h1> Untuk kode <i>progam ini</i> dapat ditemukan di laman repositori
+        <a href="https://github.com/">Github</a> saya pribadi dan <b>satu-satunya</b>
+        <a href="https://github.com/rizalhimself">di sini</a>]]>
+        </string>
 </resources>

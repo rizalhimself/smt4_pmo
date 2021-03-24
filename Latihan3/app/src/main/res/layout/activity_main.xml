@@ -74,16 +74,37 @@
             android:layout_height="wrap_content"
             android:maxLines="2"
             android:minLines="1"
-            android:text="Di sebuah desa, yang terpencil di tengah hutan
-            belantara hiduplah seorang petani tua bersama anak gadisnya
-            yang cantik jelita"
+            android:text="Di sebuah desa, yang terpencil di tengah hutan belantara hiduplah seorang petani tua bersama anak gadisnya yang cantik jelita"
+            android:textAlignment="center"
             android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tvCobaHTML"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Coba HTML" />
+            android:textSize="20sp"
+            android:text="previewHTML"/>
+
+        <TextView
+            android:id="@+id/tvCobaHTMLPanjang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="PreviewHTMLPanjang"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nomor telfon saya adalah +6282133976008"
+            android:autoLink="phone"
+            android:clickable="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Website pribadi saya adalah http://rizalhimself.blogspot.com/"
+            android:autoLink="all"
+            android:clickable="true"/>
 
 
     </LinearLayout>
