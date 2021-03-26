@@ -5,10 +5,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -71,5 +75,38 @@ public class MainActivity extends AppCompatActivity {
         String[] negara = {"  Indonesia","  Brunei","  Malaysia","  Laos","  Vietnam","  Timor Leste","  Myanmar"};
         ArrayAdapter<String> adaptor = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, negara);
         textView.setAdapter((adaptor));
+
+        ImageButton iTScooter = findViewById(R.id.iTScooter);
+        iTScooter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"Anda mengklik gambar Skuter", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+    }
+
+    public void tampilkanPesan(View view) {
+        Toast.makeText(this,"Anda mengklik tombol Pesan", Toast.LENGTH_SHORT).show();
+    }
+
+    public void tampilkanPesanSkuter(View view) {
+        Toast.makeText(this,"Anda mengklik tombol Skuter", Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void onClickJK(View view) {
+        Boolean diklik = ((RadioButton)view).isChecked();
+        switch (view.getId()){
+            case R.id.rdButton1:
+                if (diklik)
+                    Toast.makeText(this, "Aku wong lanang",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.rdButton2:
+                if (diklik)
+                    Toast.makeText(this,"Aku wong wedok", Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 }

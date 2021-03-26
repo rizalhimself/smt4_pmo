@@ -109,8 +109,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="contoh EditText input nomor"/>
+            android:hint="contoh EditText input nomor"
+            android:inputType="number" />
 
         <EditText
             android:layout_width="match_parent"
@@ -146,8 +146,63 @@
             android:layout_height="wrap_content"
             android:id="@+id/autoTV"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pesan"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:onClick="tampilkanPesan"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_bike_scooter_24"
+                android:id="@+id/iTScooter"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_baseline_bike_scooter_24"
+                android:text="Skuter"
+                android:textAllCaps="false"
+                android:onClick="tampilkanPesanSkuter"/>
+
+
+
+        </LinearLayout>
+        
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pria"
+                android:layout_weight="1"
+                android:id="@+id/rdButton1"
+                android:onClick="onClickJK"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wanita"
+                android:layout_weight="1"
+                android:id="@+id/rdButton2"
+                android:onClick="onClickJK"/>
+
+        ></RadioGroup>
+
 
 
     </LinearLayout>
+
 
 </ScrollView>
