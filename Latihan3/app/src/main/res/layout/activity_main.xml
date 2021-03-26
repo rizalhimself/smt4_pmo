@@ -140,6 +140,12 @@
             android:hint="contoh EditText dengan ImeOptions Search"
             android:imeOptions="actionSearch"/>
 
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:hint="contoh Auto Complete TextView"
+            android:layout_height="wrap_content"
+            android:id="@+id/autoTV"/>
+
 
 
     </LinearLayout>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -66,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         /*TextView Suggestion*/
-        
+        AutoCompleteTextView textView = (AutoCompleteTextView)  findViewById(R.id.autoTV);
+        String[] negara = {"  Indonesia","  Brunei","  Malaysia","  Laos","  Vietnam","  Timor Leste","  Myanmar"};
+        ArrayAdapter<String> adaptor = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, negara);
+        textView.setAdapter((adaptor));
     }
 }
