@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -81,6 +82,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"Anda mengklik gambar Skuter", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        /*RatingBar*/
+        RatingBar ratingBar = (RatingBar) findViewById(R.id.rating);
+        Button tombolRating = (Button) findViewById(R.id.tampilkanRating);
+        tombolRating.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nilaiRating = String.valueOf(ratingBar.getRating());
+                Toast.makeText(MainActivity.this, "Nilainya adalah "+nilaiRating+" !", Toast.LENGTH_SHORT).show();
             }
         });
 
