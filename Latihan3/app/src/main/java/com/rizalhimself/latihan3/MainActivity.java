@@ -99,15 +99,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*Button tampilkan pesan*/
     public void tampilkanPesan(View view) {
         Toast.makeText(this,"Anda mengklik tombol Pesan", Toast.LENGTH_SHORT).show();
     }
 
+    /*Button tampilkan pesan skuter*/
     public void tampilkanPesanSkuter(View view) {
         Toast.makeText(this,"Anda mengklik tombol Skuter", Toast.LENGTH_SHORT).show();
     }
 
 
+    /*Radio Button*/
     public void onClickJK(View view) {
         Boolean diklik = ((RadioButton)view).isChecked();
         switch (view.getId()){
