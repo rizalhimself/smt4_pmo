@@ -9,6 +9,12 @@
     android:orientation="vertical">
 
 
+    <Spinner
+        android:id="@+id/spJumlahKolom"
+        android:entries="@array/ajmlkolom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/resDataDosen"
         android:layout_width="match_parent"

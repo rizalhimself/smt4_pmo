@@ -10,19 +10,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class ListDataDosenAdapter extends RecyclerView.Adapter<ListDataDosenAdapter.MyHolder>{
-    private Context context;
+public class ListDataDosenAdapter extends RecyclerView.Adapter<ListDataDosenAdapter.MyHolder> {
     ArrayList<String> mFoto = new ArrayList<>();
     ArrayList<String> mNama = new ArrayList<>();
     ArrayList<String> mAlamat = new ArrayList<>();
     ArrayList<String> mEmail = new ArrayList<>();
+    private final Context context;
 
     public ListDataDosenAdapter(Context context, ArrayList<String> mFoto, ArrayList<String> mNama, ArrayList<String> mAlamat, ArrayList<String> mEmail) {
         this.context = context;
@@ -34,8 +33,7 @@ public class ListDataDosenAdapter extends RecyclerView.Adapter<ListDataDosenAdap
 
     @NonNull
     @Override
-    public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
-    {
+    public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_data_dosen, parent, false);
         MyHolder holder = new MyHolder(view);
         return holder;
@@ -43,14 +41,14 @@ public class ListDataDosenAdapter extends RecyclerView.Adapter<ListDataDosenAdap
 
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
-        Glide.with(context).asBitmap().load(mFoto.get(position)).into(holder.ivFoto);
+        Glide.with(context).asBitmap().load(mFoto.get(position)).error(R.drawable.ic_android_black_24dp).into(holder.ivFoto);
         holder.tvNama.setText(mNama.get(position));
         holder.tvAlamat.setText(mAlamat.get(position));
         holder.tvEmail.setText(mEmail.get(position));
         holder.lyListDosen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, mNama.get(position).toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, mNama.get(position), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -68,11 +66,11 @@ public class ListDataDosenAdapter extends RecyclerView.Adapter<ListDataDosenAdap
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
-            ivFoto= itemView.findViewById(R.id.ivFoto);
-            tvNama=itemView.findViewById(R.id.tvNama);
-            tvAlamat=itemView.findViewById(R.id.tvAlamat);
-            tvEmail=itemView.findViewById(R.id.tvEmail);
-            lyListDosen=itemView.findViewById(R.id.lyListDosen);
+            ivFoto = itemView.findViewById(R.id.ivFoto);
+            tvNama = itemView.findViewById(R.id.tvNama);
+            tvAlamat = itemView.findViewById(R.id.tvAlamat);
+            tvEmail = itemView.findViewById(R.id.tvEmail);
+            lyListDosen = itemView.findViewById(R.id.lyListDosen);
         }
     }
 }

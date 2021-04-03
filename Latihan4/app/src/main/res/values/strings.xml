@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Latihan4</string>
+    <string-array name="ajmlkolom">
+        <item>Silakan Pilih Jumlah Kolom</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
 </resources>
