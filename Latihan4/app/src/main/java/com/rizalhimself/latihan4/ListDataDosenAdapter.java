@@ -17,11 +17,11 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 public class ListDataDosenAdapter extends RecyclerView.Adapter<ListDataDosenAdapter.MyHolder> {
+    private final Context context;
     ArrayList<String> mFoto = new ArrayList<>();
     ArrayList<String> mNama = new ArrayList<>();
     ArrayList<String> mAlamat = new ArrayList<>();
     ArrayList<String> mEmail = new ArrayList<>();
-    private final Context context;
 
     public ListDataDosenAdapter(Context context, ArrayList<String> mFoto, ArrayList<String> mNama, ArrayList<String> mAlamat, ArrayList<String> mEmail) {
         this.context = context;

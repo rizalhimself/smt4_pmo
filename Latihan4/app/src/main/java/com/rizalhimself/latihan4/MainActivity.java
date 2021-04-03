@@ -77,11 +77,11 @@ public class MainActivity extends AppCompatActivity {
         mAlamat.add(" Ciberem, RT. 05/01, Kec. Sumbang, Kab. Banyumas ");
         mEmail.add(" dhanar.amikom@gmail.com ");
 
-        recyclerView = (RecyclerView) findViewById(R.id.resDataDosen);
+        recyclerView = findViewById(R.id.resDataDosen);
         ListDataDosenAdapter adapter = new ListDataDosenAdapter(this, mFoto, mNama, mAlamat, mEmail);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        spJmlKolom=(Spinner)findViewById(R.id.spJumlahKolom);
+        spJmlKolom = findViewById(R.id.spJumlahKolom);
         spJmlKolom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
