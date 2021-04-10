@@ -1,19 +1,22 @@
 package com.rizalhimself.latihan5;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button1, button2, button3, button4;
+    Button button1, button2, button3, button4, button5, button6;
+    ArrayList beberapaPilihan = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
         button4 = findViewById(R.id.button4);
+        button5 = findViewById(R.id.button5);
+        button6 = findViewById(R.id.button6);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,9 +56,23 @@ public class MainActivity extends AppCompatActivity {
                 dialogTunggal(v);
             }
         });
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //fungsi ketika tombol5 diklik
+                beberapaPilihan(v);
+            }
+        });
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //fungsi ketika tombol6 diklik
+                dialogDenganLayoutKhusus(v);
+            }
+        });
     }
 
-    public void dialogDenganTombol (View view){
+    public void dialogDenganTombol(View view) {
         AlertDialog.Builder peringatan = new AlertDialog.Builder(this);
         peringatan.setIcon(R.mipmap.ic_launcher);
         peringatan.setTitle("Ini dari tombol 1");
@@ -69,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         pesan.show();
     }
 
-    public void dialogDengan2Tombol (View view){
+    public void dialogDengan2Tombol(View view) {
         AlertDialog.Builder peringatan = new AlertDialog.Builder(this);
         peringatan.setIcon(R.mipmap.ic_launcher);
         peringatan.setTitle("Ini dari tombol 2");
@@ -91,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         pesan.show();
     }
 
-    public void dialogDengan3Tombol (View view){
+    public void dialogDengan3Tombol(View view) {
         AlertDialog.Builder peringatan = new AlertDialog.Builder(this);
         peringatan.setIcon(R.mipmap.ic_launcher);
         peringatan.setTitle("Ini dari tombol 3");
@@ -118,44 +137,68 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog pesan = peringatan.create();
         pesan.show();
     }
-    public void dialogTunggal (View view){
-        final String pilihan[]={"Merah","Kuning","Biru","Hijau","Hitam"};
+
+    public void dialogTunggal(View view) {
+        final String[] pilihan = {"Merah", "Kuning", "Biru", "Hijau", "Hitam"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Silakan pilih warna yang anda sukai")
                 .setIcon(R.mipmap.ic_launcher)
                 .setItems(pilihan, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(MainActivity.this, "Warna yang anda sukai : "+ pilihan[which], Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Warna yang anda sukai : " + pilihan[which], Toast.LENGTH_SHORT).show();
                     }
                 });
         builder.create().show();
     }
 
-    ArrayList beberapaPilihan = new ArrayList();
-    public void beberapaPilihan (View view){
-        final String pilihan[]={"Tahu","Nasi Padang","Kopi","Rames"};
+    public void beberapaPilihan(View view) {
+        final String[] pilihan = {"Tahu", "Nasi Padang", "Kopi", "Rames"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Silakan pilih menu sarapan")
                 .setIcon(R.mipmap.ic_launcher)
                 .setMultiChoiceItems(pilihan, null, new DialogInterface.OnMultiChoiceClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-                        if (isChecked){
+                        if (isChecked) {
                             beberapaPilihan.add(which);
-                    } else if (beberapaPilihan.contains(which)){
+                        } else if (beberapaPilihan.contains(which)) {
                             beberapaPilihan.remove(Integer.valueOf(which));
                         }
-                }
-    })
+                    }
+                })
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        Toast.makeText(MainActivity.this, "Sarapan yang anda pilih adalah : " + beberapaPilihan.toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
         builder.create().show();
 
+    }
+
+    public void dialogDenganLayoutKhusus(View view) {
+        EditText etNama;
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        etNama = findViewById(R.id.username);
+
+
+
+        builder.setView(inflater.inflate(R.layout.layout_masuk, null));
+        builder.setPositiveButton("Masuk", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                setContentView(R.layout.activity_main);
+                Toast.makeText(MainActivity.this, "Hallo Selamat Datang !" /*+ etNama.getText().toString()*/, Toast.LENGTH_SHORT).show();
+                }
+        });
+        builder.setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        builder.create().show();
     }
 
 }

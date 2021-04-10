@@ -3,31 +3,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
     android:orientation="vertical"
+    android:padding="8dp"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dialog dengan 1 tombol"/>
+        android:text="Dialog dengan 1 tombol" />
 
     <Button
+        android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dialog dengan 2 tombol"
-        android:id="@+id/button2"/>
+        android:text="Dialog dengan 2 tombol" />
+
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Dialog dengan 3 tombol" />
+
     <Button
+        android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pilihan warna"
-        android:id="@+id/button4"/>
+        android:text="Pilihan warna" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dialog dengan pilihan ganda" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dialog dengan layout khusus" />
 
 
 </LinearLayout>
