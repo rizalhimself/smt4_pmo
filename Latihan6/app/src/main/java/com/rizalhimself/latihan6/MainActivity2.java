@@ -26,6 +26,7 @@ public class MainActivity2 extends AppCompatActivity {
         TextView tvMainActivity2 = new TextView(this);
         tvMainActivity2.setTextSize(40);
         tvMainActivity2.setText(message);
+        tvMainActivity2.setPadding(30,8,30,20);
 
         //Jadikan TextView sebagai main activity layout
         setContentView(tvMainActivity2);
