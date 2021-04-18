@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:title="@string/menutambah" >
-        <menu >
-            <item android:title="@string/menutambahorang"
+    <item
+        android:title="@string/menutambah"
+        app:showAsAction="collapseActionView">
+        <menu>
+            <item
                 android:id="@+id/menuTambahOrang"
-                app:showAsAction="collapseActionView"/>
+                android:title="@string/menutambahorang"
+                app:showAsAction="ifRoom" />
         </menu>
     </item>
-    <item android:title="@string/menuedit"
+    <item
         android:id="@+id/menuEdit"
-        app:showAsAction="collapseActionView"/>
-    <item android:title="@string/menucari"
+        android:title="@string/menuedit"
+        app:showAsAction="collapseActionView" />
+    <item
         android:id="@+id/menuCari"
-        app:showAsAction="collapseActionView"/>
+        android:title="@string/menucari"
+        app:showAsAction="collapseActionView" />
 </menu>

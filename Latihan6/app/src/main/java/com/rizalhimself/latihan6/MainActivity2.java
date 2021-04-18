@@ -1,5 +1,6 @@
 package com.rizalhimself.latihan6;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -12,7 +13,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
