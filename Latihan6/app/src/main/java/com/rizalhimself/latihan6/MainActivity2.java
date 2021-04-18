@@ -12,12 +12,14 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity2 extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Toast.makeText(this, "Ini adalah Activity 2", Toast.LENGTH_SHORT).show();
 
         //Ambil pesan dari intent
         Intent intent = getIntent();

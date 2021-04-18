@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@color/purple_200"/>
+    <item android:drawable="@color/white"/>
 
-    <item android:gravity="center" android:width="100dp" android:height="100dp">
+    <item android:gravity="center" android:width="250dp" android:height="200dp">
         <bitmap
             android:gravity="fill_horizontal|fill_vertical"
-            android:src="@drawable/icon_codepolitan_m"/>
+            android:src="@drawable/logo_warung_cropped"/>
     </item>
 </layer-list>
