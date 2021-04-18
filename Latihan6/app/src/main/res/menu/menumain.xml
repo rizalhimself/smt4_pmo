@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="@string/menutambah" >
+        <menu >
+            <item android:title="@string/menutambahorang"
+                android:id="@+id/menuTambahOrang"
+                app:showAsAction="collapseActionView"/>
+        </menu>
+    </item>
+    <item android:title="@string/menuedit"
+        android:id="@+id/menuEdit"
+        app:showAsAction="collapseActionView"/>
+    <item android:title="@string/menucari"
+        android:id="@+id/menuCari"
+        app:showAsAction="collapseActionView"/>
+</menu>
