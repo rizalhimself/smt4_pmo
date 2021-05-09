@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Perhitungan Nilai Mahasiswa</string>
+    <string-array name="array_matkul">
+        <item>Pemrograman Mobile</item>
+        <item>P2D</item>
+        <item>Statistika</item>
+        <item>Advanced English</item>
+        <item>Pengantar Sistem Informasi</item>
+        <item>Teori Graf</item>
+        <item>Pebelajaran Mesin</item>
+        <item>Cloud Computing</item>
+    </string-array>
+    <string name="Identitas">
+        Program <i>ini</i> dibuat oleh <a href="https://rizalhimself.blogspot.com/"><b>Rizal Alfikri</b></a> dengan <b>NIM 19SA1116</b>
+    </string>
+</resources>
